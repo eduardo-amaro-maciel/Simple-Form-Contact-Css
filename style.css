@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form {
+    position: absolute;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 480px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.container-input {
+    width: 100%;
+}
+
+.input-text-context .form-input {
+    width: 100%;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    border-radius: 60px;
+    outline: none;
+    box-shadow: 0 0 0 0 ;
+    border: 2px solid #1ccfdb;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    font-size: 16px;
+    color: #303534;
+}
+
+.input-text-context:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text-context:nth-child(2) 
+.form-input-inline {
+    width: 48%;
+}
+
+.input-check-context {
+    display: flex;
+    margin-bottom: 18px;
+    align-items: start;
+}
+
+.input-check-context
+.text-label-check {
+    color: #303534;
+}
+
+.input-check-context .mt-ios-blue {
+    margin-right: 10px;
+}
+
+#sendButton {
+    width: 120px;
+
+}
+
+button {
+    width: 240px;
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 3px;
+    height: 3em;
+    padding: 0 3em;
+    border: none;
+    background-color: #717e7d;
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 5px
+}
+   
+button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background: #13BE11;
+    background: linear-gradient(90deg, rgb(82, 201, 36) 20%, rgb(0, 250, 42) 100%);
+    transition: 0.2s;
+}
+   
+button .label {
+    position: relative;
+}
+   
+button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    top: 3em;
+    right: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+   
+button:hover::before {
+    height: 100%;
+}
+   
+button:hover .icon {
+    top: 0;
+    opacity: 1;
+    z-index: 3;
+}
+
+.container-svg {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
